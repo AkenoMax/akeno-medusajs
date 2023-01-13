@@ -32,10 +32,6 @@ const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
 const DATABASE_URL =
   process.env.DATABASE_URL || "postgres://localhost/medusa-store";
 
-const DATABASE_URL = 
-  `postgres://${DB_USERNAME}:${DB_PASSWORD}` + 
-  `@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`
-
 // Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
