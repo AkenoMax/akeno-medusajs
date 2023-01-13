@@ -23,10 +23,10 @@ try {
 }
 
 // CORS when consuming Medusa from admin
-const ADMIN_CORS = process.env.ADMIN_CORS || "https://akeno-admin-pl.netlify.app:80","https://akeno-admin-pl.netlify.app:443";
+const ADMIN_CORS = process.env.ADMIN_CORS || "https://akeno-admin-pl.netlify.app:80,https://akeno-admin-pl.netlify.app:443";
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "https://akeno-pl.netlify.app:80","https://akeno-pl.netlify.app:443";
+const STORE_CORS = process.env.STORE_CORS || "https://akeno-pl.netlify.app:80,https://akeno-pl.netlify.app:443";
 
 // Database URL (here we use a local database called medusa-development)
 const DATABASE_URL =
