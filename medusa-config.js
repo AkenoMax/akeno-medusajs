@@ -33,7 +33,7 @@ const DATABASE_URL =
   process.env.DATABASE_URL || "postgresql://postgres:rslh6zBr7HuWAdGX4R1Z@containers-us-west-84.railway.app:7453/railway";
 
 // Medusa uses Redis, so this needs configuration as well
-const REDIS_URL = process.env.REDIS_URL || "redis-cli -u redis://default:xtwTl029gEfo37ovJcbU@containers-us-west-181.railway.app:6808";
+const REDIS_URL = process.env.REDIS_URL || "redis://default:xtwTl029gEfo37ovJcbU@containers-us-west-181.railway.app:6808";
 
 // Stripe keys
 const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "";
@@ -56,12 +56,12 @@ const plugins = [
 
 module.exports = {
   projectConfig: {
-    // redis_url: REDIS_URL,
+    redis_url: REDIS_URL,
     // For more production-like environment install PostgresQL
-    // database_url: DATABASE_URL,
-    // database_type: "postgres",
-    database_database: "./medusa-db.sql",
-    database_type: "sqlite",
+    database_url: DATABASE_URL,
+    database_type: "postgres",
+    //database_database: "./medusa-db.sql",
+    // database_type: "sqlite",
     store_cors: STORE_CORS,
     admin_cors: ADMIN_CORS,
     database_extra: { ssl: { rejectUnauthorized: false } },
