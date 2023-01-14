@@ -22,12 +22,6 @@ try {
 } catch (e) {
 }
 
-// CORS when consuming Medusa from admin
-const ADMIN_CORS = process.env.ADMIN_CORS || "https://akeno-admin-pl.netlify.app";
-
-// CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "https://akeno-pl.netlify.app";
-
 // This is the place to include plugins. See API documentation for a thorough guide on plugins.
 const plugins = [
   `medusa-fulfillment-manual`,
@@ -47,8 +41,8 @@ module.exports = {
     redis_url: process.env.REDIS_URL,
     database_url: process.env.DATABASE_URL,
     database_type: "postgres",
-    store_cors: STORE_CORS,
-    admin_cors: ADMIN_CORS,
+    store_cors: process.env.STORE_CORS,
+    admin_cors: process.env.ADMIN_CORS,
     database_extra: { ssl: { rejectUnauthorized: false } },
   },
   plugins,
