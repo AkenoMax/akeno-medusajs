@@ -23,7 +23,7 @@ try {
 }
 
 // CORS when consuming Medusa from admin
-const ADMIN_CORS = process.env.ADMIN_CORS || "https://akeno-medusajs-admin-production.up.railway.app";
+const ADMIN_CORS = process.env.ADMIN_CORS || "https://admin.akeno.pl/";
 
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = process.env.STORE_CORS || "http://akeno.pl/";
