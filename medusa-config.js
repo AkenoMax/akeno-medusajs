@@ -26,7 +26,7 @@ try {
 const ADMIN_CORS = process.env.ADMIN_CORS || "https://akeno-medusajs-admin-production.up.railway.app";
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "https://akeno-medusajs-storefront-production.up.railway.app/";
+const STORE_CORS = process.env.STORE_CORS || "https://akeno.pl/";
 
 // This is the place to include plugins. See API documentation for a thorough guide on plugins.
 const plugins = [
