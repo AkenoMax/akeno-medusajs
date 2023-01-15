@@ -39,6 +39,15 @@ const plugins = [
          api_key: process.env.STRIPE_API_KEY,
          webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
        },
+	     
+     {
+   	resolve: `medusa-file-minio`,
+    	options: {
+        endpoint: process.env.MINIO_ENDPOINT,
+        bucket: process.env.MINIO_BUCKET,
+        access_key_id: process.env.MINIO_ACCESS_KEY,
+        secret_access_key: process.env.MINIO_SECRET_KEY,
+       },
      },
 ];
 
