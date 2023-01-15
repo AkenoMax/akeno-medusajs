@@ -23,10 +23,10 @@ try {
 }
 
 // CORS when consuming Medusa from admin
-const ADMIN_CORS = process.env.ADMIN_CORS || "https://admin.akeno.pl:443,https://akeno-admin-pl.netlify.app:443,https://akeno-medusajs-admin-production.up.railway.app:443";
+const ADMIN_CORS = process.env.ADMIN_CORS || "*,*.akeno.pl";
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "https://akeno.pl:443,https://akeno-pl.netlify.app:443,https://akeno-medusajs-storefront-production.up.railway.app:443";
+const STORE_CORS = process.env.STORE_CORS || "*,*.akeno.pl";
 
 // This is the place to include plugins. See API documentation for a thorough guide on plugins.
 const plugins = [
