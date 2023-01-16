@@ -50,8 +50,11 @@ const plugins = [
        },
      },
      {	
+	resolve: `medusa-plugin-sendgrid`,
+	options: {
 	api_key: process.env.SENDGRID_API_KEY,
   	from: "akeno@akeno.pl",
+       },
      },	     
 ];
 
