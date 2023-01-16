@@ -54,6 +54,7 @@ const plugins = [
 	options: {
 	api_key: process.env.SENDGRID_API_KEY,
   	from: "akeno@akeno.pl",
+	order_placed_template:"d-7d7d2f67ad3d4025930c7093271f9984",		
        },
      },	     
 ];
