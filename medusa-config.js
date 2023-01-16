@@ -49,6 +49,10 @@ const plugins = [
         secret_access_key: process.env.MINIO_SECRET_KEY,
        },
      },
+     {	
+	api_key: process.env.SENDGRID_API_KEY,
+  	from: "akeno@akeno.pl",
+     },	     
 ];
 
 module.exports = {
